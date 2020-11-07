@@ -108,7 +108,6 @@ public abstract class ModTask implements Runnable {
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return this.getClass().getSimpleName();
 	}
 

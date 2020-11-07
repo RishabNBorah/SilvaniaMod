@@ -100,7 +100,6 @@ public class BlockInfo implements INBTSerializable<CompoundNBT>, IDynamicSeriali
 
 	@Override
 	public <T> T serialize(DynamicOps<T> ops) {
-		// TODO Auto-generated method stub
 		return ops.createString(this.serializeNBT().getString());
 	}
 
@@ -116,13 +115,11 @@ public class BlockInfo implements INBTSerializable<CompoundNBT>, IDynamicSeriali
 
 	@Override
 	public boolean equals(Object obj) {
-		// TODO Auto-generated method stub
 		return this.serializeNBT().equals(((BlockInfo) obj).serializeNBT());
 	}
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return this.serializeNBT().toString();
 	}
 

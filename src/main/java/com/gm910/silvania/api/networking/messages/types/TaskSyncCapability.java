@@ -1,8 +1,8 @@
 package com.gm910.silvania.api.networking.messages.types;
 
-import com.gm910.silvania.capabilities.GMCaps;
 import com.gm910.silvania.api.networking.messages.ModTask;
 import com.gm910.silvania.api.util.ModReflect;
+import com.gm910.silvania.capabilities.GMCaps;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
@@ -70,7 +70,6 @@ public class TaskSyncCapability extends ModTask {
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return super.toString() + ": " + capComp;
 	}
 

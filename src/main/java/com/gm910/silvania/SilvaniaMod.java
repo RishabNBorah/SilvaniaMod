@@ -15,7 +15,6 @@ import com.gm910.silvania.init.TileInit;
 import com.gm910.silvania.keys.ModKeys;
 import com.gm910.silvania.world.dimension.DimensionData;
 
-import net.minecraft.world.gen.feature.structure.EndCityStructure;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.world.RegisterDimensionsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -69,9 +68,8 @@ public class SilvaniaMod {
 
 		IEventBus modBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-
 		BlockInit.BLOCKS.register(modBus);
-		
+
 		ItemInit.ITEMS.register(modBus);
 		System.out.println("ITems registered");
 
@@ -81,11 +79,9 @@ public class SilvaniaMod {
 		EntityInit.ENTITY_TYPES.register(modBus);
 		System.out.println("EntityTypes registered");
 
-		
-
 		DimensionInit.WORLD_MAKERS.register(modBus);
 		System.out.println("World-makers registered");
-		
+
 		ModChannels.INSTANCE.registerMessage(ModChannels.id++, TaskMessage.class, TaskMessage::encode,
 				TaskMessage::fromBuffer, TaskMessage::handle);
 
@@ -98,7 +94,7 @@ public class SilvaniaMod {
 		System.out.println("HELLO FROM PREINIT");
 		/*ModChannels.INSTANCE.registerMessage(ModChannels.id++, TaskMessage.class, TaskMessage::encode,
 				TaskMessage::fromBuffer, TaskMessage::handle);*/
-		
+
 	}
 
 	private void doClientStuff(final FMLClientSetupEvent event) {
@@ -128,7 +124,7 @@ public class SilvaniaMod {
 
 	@SubscribeEvent
 	public void onServerStarting(FMLServerStartingEvent event) {
-
+		// TODO ClimateData.get(event.getServer());
 	}
 
 	@SubscribeEvent
@@ -148,7 +144,7 @@ public class SilvaniaMod {
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 	public static class RegistryEvents {
-		
+
 		/*
 				@SubscribeEvent
 				public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {

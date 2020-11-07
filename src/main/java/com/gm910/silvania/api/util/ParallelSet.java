@@ -37,7 +37,6 @@ public class ParallelSet<ThisClass, BaseClass> extends HashSet<ThisClass> {
 
 	@Override
 	public int size() {
-		// TODO Auto-generated method stub
 		return delegate.size();
 	}
 
@@ -57,13 +56,11 @@ public class ParallelSet<ThisClass, BaseClass> extends HashSet<ThisClass> {
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
 		return delegate.isEmpty();
 	}
 
 	@Override
 	public boolean contains(Object o) {
-		// TODO Auto-generated method stub
 		return delegate.contains(toYoursOrConvert(o));
 	}
 
@@ -133,7 +130,6 @@ public class ParallelSet<ThisClass, BaseClass> extends HashSet<ThisClass> {
 
 	@Override
 	public boolean addAll(Collection<? extends ThisClass> c) {
-		// TODO Auto-generated method stub
 		return delegate.addAll(c.stream().map(mineToYours).collect(Collectors.toList()));
 	}
 
@@ -168,25 +164,21 @@ public class ParallelSet<ThisClass, BaseClass> extends HashSet<ThisClass> {
 
 	@Override
 	public Spliterator<ThisClass> spliterator() {
-		// TODO Auto-generated method stub
 		return this.convertWholeSet().spliterator();
 	}
 
 	@Override
 	public Stream<ThisClass> parallelStream() {
-		// TODO Auto-generated method stub
 		return this.convertWholeSet().parallelStream();
 	}
 
 	@Override
 	public boolean removeIf(Predicate<? super ThisClass> filter) {
-		// TODO Auto-generated method stub
 		return delegate.removeIf((e) -> filter.test(yoursToMine(e)));
 	}
 
 	@Override
 	public Stream<ThisClass> stream() {
-		// TODO Auto-generated method stub
 		return this.convertWholeSet().stream();
 	}
 

@@ -1,0 +1,8 @@
+{
+
+	"_title": "Errors",
+	"error.no.program":"No program exists!",
+	"error.mismatched.scope":"You have a scope ender that doesn't match with a scope header",
+	"error.duplicate.variable":"The variable '%s' is duplicated",
+	"null.value": "The %s value for this part has not been given"
+}

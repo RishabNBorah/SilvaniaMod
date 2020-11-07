@@ -8,13 +8,13 @@ import com.gm910.silvania.api.networking.messages.ModTask;
 import net.minecraftforge.common.MinecraftForge;
 
 public class TaskKeyPress extends ModTask {
-	
+
 	public final int key;
 
 	public TaskKeyPress() {
 		key = 0;
 	}
-	
+
 	public TaskKeyPress(int key) {
 		this.key = key;
 	}
@@ -23,10 +23,9 @@ public class TaskKeyPress extends ModTask {
 	public void run() {
 		MinecraftForge.EVENT_BUS.post(new ServerKeyEvent(key));
 	}
-	
+
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return super.toString() + ": " + KeyEvent.getModifiersExText(key);
 	}
 

@@ -67,7 +67,6 @@ public class ServerPos extends BlockPos implements IDynamicSerializable {
 	public ServerPos(Vec3i source, int d) {
 		super(source);
 		this.d = d;
-		// TODO Auto-generated constructor stub
 	}
 
 	public ServerPos(Vec3d vec, DimensionType d) {
@@ -84,7 +83,6 @@ public class ServerPos extends BlockPos implements IDynamicSerializable {
 	public ServerPos(Vec3i source, DimensionType d) {
 		super(source);
 		this.d = d.getId();
-		// TODO Auto-generated constructor stub
 	}
 
 	public ServerPos(int x, int y, int z, int d) {
@@ -166,7 +164,6 @@ public class ServerPos extends BlockPos implements IDynamicSerializable {
 	}
 
 	public ServerPos north() {
-		// TODO Auto-generated method stub
 		return new ServerPos(super.north(), d);
 	}
 
@@ -175,7 +172,6 @@ public class ServerPos extends BlockPos implements IDynamicSerializable {
 	}
 
 	public ServerPos south() {
-		// TODO Auto-generated method stub
 		return new ServerPos(super.south(), d);
 	}
 
@@ -184,7 +180,6 @@ public class ServerPos extends BlockPos implements IDynamicSerializable {
 	}
 
 	public ServerPos east() {
-		// TODO Auto-generated method stub
 		return new ServerPos(super.east(), d);
 	}
 
@@ -193,7 +188,6 @@ public class ServerPos extends BlockPos implements IDynamicSerializable {
 	}
 
 	public ServerPos west() {
-		// TODO Auto-generated method stub
 		return new ServerPos(super.west(), d);
 	}
 
@@ -233,18 +227,15 @@ public class ServerPos extends BlockPos implements IDynamicSerializable {
 	}
 
 	public ServerPos subtract(Vec3i vec) {
-		// TODO Auto-generated method stub
 		return new ServerPos(super.subtract(vec), d);
 	}
 
 	public ServerPos rotate(Rotation rotationIn) {
-		// TODO Auto-generated method stub
 		return new ServerPos(super.rotate(rotationIn), d);
 	}
 
 	@Override
 	public <T> T serialize(DynamicOps<T> p_218175_1_) {
-		// TODO Auto-generated method stub
 		return p_218175_1_.createIntList(IntStream.of(this.getX(), this.getY(), this.getZ(), this.getD()));
 	}
 
@@ -292,7 +283,7 @@ public class ServerPos extends BlockPos implements IDynamicSerializable {
 		return ServerPos.toNBT(this);
 	}
 
-	public World getWorld(MinecraftServer server) {
+	public ServerWorld getWorld(MinecraftServer server) {
 		return server.getWorld(this.getDimension());
 	}
 

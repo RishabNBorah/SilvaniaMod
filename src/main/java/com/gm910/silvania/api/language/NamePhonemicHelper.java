@@ -261,7 +261,6 @@ public class NamePhonemicHelper {
 
 		@Override
 		public String toString() {
-			// TODO Auto-generated method stub
 			return getLetters();
 		}
 
