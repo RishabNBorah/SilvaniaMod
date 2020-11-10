@@ -1,6 +1,11 @@
 # SilvaniaMod
-The Silvania is an enormous, magical tree home to the magical wood nymphs
+The Silvania is a world of programmatic magic and mystic factions.
 
+<h1>Spells</h1>
+Spells are a system of magic which rely on block placement. To cast a spell, you need the Runic Workbench and the Spiritual Wand. 
+
+
+<h1>OBSOLETE????</h1>
 WOOD NYMPHS:
 
 <ul>
